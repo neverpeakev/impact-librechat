@@ -1,0 +1,14 @@
+Impact LibreChat
+Copyright 2026 Never Peak
+
+This product is a modified version of LibreChat (https://github.com/danny-avila/LibreChat),
+Copyright (c) LibreChat contributors, licensed under the MIT License (see LICENSE).
+It is not affiliated with or endorsed by the LibreChat project.
+
+Modifications (2026), all for ImpactWait:
+- client/src/components/Chat/Messages/ImpactWait/ (new): the sponsored line, site-key helper, tests;
+  element.js is the MIT-licensed <impact-wait> web component, vendored byte-for-byte.
+- client/src/components/Chat/Messages/MessagesView.tsx: renders <ImpactWait /> while a reply generates.
+- client/src/store/impactWait.ts (new) + Settings registry/context/types + en translation: per-user toggle.
+- api/server/routes/config.js + packages/data-provider/src/config.ts: IMPACT_WAIT / IMPACT_WAIT_SITE in startup config.
+- .env.example, .prettierignore, README.md, NOTICE.

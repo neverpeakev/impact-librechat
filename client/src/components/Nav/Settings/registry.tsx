@@ -44,6 +44,7 @@ import AdminPanel from '../SettingsTabs/General/AdminPanel';
 import SharedLinks from '../SettingsTabs/Data/SharedLinks';
 import ImageResize from '../SettingsTabs/Chat/ImageResize';
 import { showThinkingAtom } from '~/store/showThinking';
+import { showImpactWaitAtom } from '~/store/impactWait';
 import ProviderKeys from '../SettingsTabs/ProviderKeys';
 import { autoScrollAtom } from '~/store/autoScroll';
 import Avatar from '../SettingsTabs/Account/Avatar';
@@ -362,6 +363,20 @@ export const registry: SettingEntry[] = [
       stateAtom: showThinkingAtom,
       localizationKey: 'com_nav_show_thinking',
       switchId: 'showThinking',
+    }),
+  },
+  {
+    id: 'showImpactWait',
+    tab: CHAT,
+    section: 'messages',
+    labelKey: 'com_nav_show_impact_wait',
+    keywords: ['sponsored', 'ads', 'impactwait', 'waiting'],
+    show: (ctx) => ctx.impactWaitEnabled,
+    Component: toggleControl({
+      stateAtom: showImpactWaitAtom,
+      localizationKey: 'com_nav_show_impact_wait',
+      switchId: 'showImpactWait',
+      hoverCardText: 'com_nav_info_show_impact_wait',
     }),
   },
   {

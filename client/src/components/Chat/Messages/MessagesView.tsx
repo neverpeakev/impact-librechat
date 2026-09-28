@@ -15,6 +15,7 @@ import { fontSizeAtom } from '~/store/fontSize';
 import MultiMessage from './MultiMessage';
 import ScrollButton from './ScrollButton';
 import PendingTurn from './PendingTurn';
+import ImpactWait from './ImpactWait';
 import MessageNav from './MessageNav';
 import { cn } from '~/utils';
 import store from '~/store';
@@ -49,6 +50,7 @@ function MessagesViewContent({
 
   const { index, latestMessageDepth } = useChatContext();
   const isSubmitting = useRecoilValue(store.isSubmittingFamily(index));
+  const submission = useRecoilValue(store.submissionByIndex(index));
   const { showScrollButton, maximizeChatSpace } = useChatSurface();
   const autoScroll = useAtomValue(autoScrollAtom);
   /** Re-arm from the conversation that owns the RENDERED tree: the Recoil
@@ -129,6 +131,11 @@ function MessagesViewContent({
                   <PendingTurn
                     scrollableRef={scrollableRef}
                     messages={messages}
+                    maximizeChatSpace={maximizeChatSpace}
+                  />
+                  <ImpactWait
+                    active={isSubmitting}
+                    query={submission?.userMessage?.text ?? ''}
                     maximizeChatSpace={maximizeChatSpace}
                   />
                 </>

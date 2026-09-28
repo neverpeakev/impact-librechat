@@ -2560,6 +2560,12 @@ export type TStartupConfig = {
   };
   fileUploadSseEnabled?: boolean;
   endpointsDropParamsMap?: EndpointsDropParamsMap;
+  /** ImpactWait sponsored line shown while a reply generates: `IMPACT_WAIT=off` disables it,
+   *  `IMPACT_WAIT_SITE` sets the site key (otherwise the client derives one from its hostname). */
+  impactWait?: {
+    enabled: boolean;
+    site?: string;
+  };
 };
 
 export type TSharedLinkStartupInterface = Pick<
