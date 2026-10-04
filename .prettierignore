@@ -2,5 +2,5 @@
 # checked by `openapi:check`. Do not let Prettier reformat it.
 packages/api/openapi/agents.openapi.json
 
-# Vendored ImpactWait web component, kept byte-identical to upstream so upgrades are a copy.
-client/src/components/Chat/Messages/ImpactWait/element.js
+# Vendored Goodwait web component, kept byte-identical to upstream so upgrades are a copy.
+client/src/components/Chat/Messages/Goodwait/element.js

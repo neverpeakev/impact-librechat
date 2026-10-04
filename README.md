@@ -51,7 +51,7 @@
   </a>
 </p>
 
-## ImpactWait edition
+## Goodwait edition
 
 > Fork of [LibreChat](https://github.com/danny-avila/LibreChat) (MIT). Not affiliated with the LibreChat project. See [NOTICE](NOTICE).
 
@@ -61,12 +61,12 @@ While a reply is generating, users see one clearly labeled sponsored line under 
 - **Privacy.** Only the user's latest message (to pick a relevant sponsor) and the site key leave the browser. No names, account IDs, chat history or cookies.
 - **Honest counting.** A view counts only after the line is at least 50% on screen, in a visible tab, for 1 full second.
 - **Local dev is a sandbox.** `localhost`, `127.0.0.1` and `*.local` get a house ad marked "Test mode"; nothing is counted.
-- **Opt-outs.** `IMPACT_WAIT=off` turns it off for everyone. Each user can turn it off in Settings > Chat > "Show Sponsored Line While Waiting".
+- **Opt-outs.** `GOODWAIT=off` turns it off for everyone. Each user can turn it off in Settings > Chat > "Show Sponsored Line While Waiting".
 
 | Env var | What it does |
 | --- | --- |
-| `IMPACT_WAIT_SITE` | Optional leaderboard site key (2-41 chars: a-z, 0-9, dash). Default: derived from the hostname. |
-| `IMPACT_WAIT=off` | Disables ImpactWait completely. |
+| `GOODWAIT_SITE` | Optional leaderboard site key (2-41 chars: a-z, 0-9, dash). Default: derived from the hostname. |
+| `GOODWAIT=off` | Disables Goodwait completely. |
 
 ## 🚀 What's New in v0.8.8-rc4
 

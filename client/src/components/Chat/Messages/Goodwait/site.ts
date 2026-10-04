@@ -12,7 +12,7 @@ export function siteKeyFromHost(host: string): string {
   return SITE_KEY.test(key) ? key : '';
 }
 
-/** The operator's `IMPACT_WAIT_SITE` when it is a valid key, else the key derived from the host. */
+/** The operator's `GOODWAIT_SITE` when it is a valid key, else the key derived from the host. */
 export function resolveSiteKey(configured: string | undefined, host: string): string {
   const site = (configured ?? '').trim().toLowerCase();
   return SITE_KEY.test(site) ? site : siteKeyFromHost(host);

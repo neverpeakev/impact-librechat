@@ -23,7 +23,7 @@ const settingsContext: SettingsContextValue = {
   engineTTS: 'browser',
   langfuseConnectionAccess: false,
   adminPanelURL: '',
-  impactWaitEnabled: false,
+  goodwaitEnabled: false,
 };
 
 describe('settings registry', () => {

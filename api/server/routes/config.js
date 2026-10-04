@@ -153,9 +153,9 @@ function buildPostLoginPayload() {
     allowAccountDeletion:
       process.env.ALLOW_ACCOUNT_DELETION === undefined ||
       isEnabled(process.env.ALLOW_ACCOUNT_DELETION),
-    impactWait: {
-      enabled: process.env.IMPACT_WAIT?.trim().toLowerCase() !== 'off',
-      site: process.env.IMPACT_WAIT_SITE?.trim() || undefined,
+    goodwait: {
+      enabled: process.env.GOODWAIT?.trim().toLowerCase() !== 'off',
+      site: process.env.GOODWAIT_SITE?.trim() || undefined,
     },
   };
 

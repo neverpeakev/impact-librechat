@@ -2560,9 +2560,9 @@ export type TStartupConfig = {
   };
   fileUploadSseEnabled?: boolean;
   endpointsDropParamsMap?: EndpointsDropParamsMap;
-  /** ImpactWait sponsored line shown while a reply generates: `IMPACT_WAIT=off` disables it,
-   *  `IMPACT_WAIT_SITE` sets the site key (otherwise the client derives one from its hostname). */
-  impactWait?: {
+  /** Goodwait sponsored line shown while a reply generates: `GOODWAIT=off` disables it,
+   *  `GOODWAIT_SITE` sets the site key (otherwise the client derives one from its hostname). */
+  goodwait?: {
     enabled: boolean;
     site?: string;
   };

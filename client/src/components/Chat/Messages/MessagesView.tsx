@@ -15,7 +15,7 @@ import { fontSizeAtom } from '~/store/fontSize';
 import MultiMessage from './MultiMessage';
 import ScrollButton from './ScrollButton';
 import PendingTurn from './PendingTurn';
-import ImpactWait from './ImpactWait';
+import Goodwait from './Goodwait';
 import MessageNav from './MessageNav';
 import { cn } from '~/utils';
 import store from '~/store';
@@ -133,7 +133,7 @@ function MessagesViewContent({
                     messages={messages}
                     maximizeChatSpace={maximizeChatSpace}
                   />
-                  <ImpactWait
+                  <Goodwait
                     active={isSubmitting}
                     query={submission?.userMessage?.text ?? ''}
                     maximizeChatSpace={maximizeChatSpace}
